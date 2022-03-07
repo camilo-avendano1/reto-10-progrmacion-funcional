@@ -23,7 +23,8 @@ public class Reto10 {
     
     static public int sumarDigitos(int numero){
         if (numero == 0){ // si el numero es cero retornamos cero
-            return 0;
+            return 0; // cambio remoto pa ver si lo trae al original
+            
         } else {
             System.out.println("numero a sumar ahorita " + (numero % 10 ));
             return numero % 10 + sumarDigitos(numero/10); // vamos obeteniendo el ultimo numero y vamos sumando
