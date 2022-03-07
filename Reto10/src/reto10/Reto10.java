@@ -26,7 +26,6 @@ public class Reto10 {
             return 0;
         } else {
             System.out.println("numero a sumar hasta ahora " + (numero % 10 ));
-            System.out.println("suma acumulada " + numero % 10 );
             return numero % 10 + sumarDigitos(numero/10); // vamos obeteniendo el ultimo numero y vamos sumando
         }
 
