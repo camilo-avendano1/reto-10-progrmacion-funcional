@@ -25,7 +25,7 @@ public class Reto10 {
         if (numero == 0){ // si el numero es cero retornamos cero
             return 0;
         } else {
-            System.out.println("numero a sumar ahora " + (numero % 10 ));
+            System.out.println("numero a sumar ahorita " + (numero % 10 ));
             return numero % 10 + sumarDigitos(numero/10); // vamos obeteniendo el ultimo numero y vamos sumando
         }
 
