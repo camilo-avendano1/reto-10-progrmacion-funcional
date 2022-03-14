@@ -50,7 +50,7 @@ public class Reto10 {
                     case 6:
                         mayorPromedio(estudiantes);
                 }
-                //
+              
 
             } catch (InputMismatchException e) {
                 System.out.println("Ingrese un valor válido por favor. ERROR: " + e.toString());
