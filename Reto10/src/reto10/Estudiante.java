@@ -1,6 +1,8 @@
 package reto10;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 import static reto10.Utileria.scanDouble;
 import static reto10.Utileria.scanString;
 
@@ -31,16 +33,32 @@ public class Estudiante {
     }
     
     public static void mayorPromedio(ArrayList<Estudiante> estudiantes){
-        System.out.println(
-           estudiantes.stream()
-         .map(estudiante -> estudiante.getPromedio())
-        )
-        ;
-        
+        if(estudiantes.size() > 0){
+        List <Estudiante> resultado = estudiantes.stream().filter(estudiante -> estudiante.getPromedio() == estudiantes.stream()
+        .mapToDouble(Estudiante::getPromedio)
+        .max().getAsDouble())
+        .collect(Collectors.toList());
+        System.out.println("El/los estudiantes con mayor promedio son:");
+        resultado.forEach(System.out::println);
+        }else{
+            System.out.println("No hay estudiantes por analizar.");
+        }
+    }
+    public static void menorPromedio(ArrayList<Estudiante> estudiantes){
+        if(estudiantes.size() > 0){
+        List <Estudiante> resultado = estudiantes.stream().filter(estudiante -> estudiante.getPromedio() == estudiantes.stream()
+        .mapToDouble(Estudiante::getPromedio)
+        .min().getAsDouble())
+        .collect(Collectors.toList());
+        System.out.println("El/los estudiantes con menor promedio son:");
+        resultado.forEach(System.out::println);
+        }else{
+            System.out.println("No hay estudiantes por analizar.");
+        }
+    
+    
     }
     
-    
-
     public String getNombre() {
         return nombre;
     }
@@ -67,6 +85,7 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "Estudiante{" + "nombre: " + nombre + ", apellido: " + apellido + ", promedio: " + promedio + '}';
+        return "nombre: " + nombre + ", apellido: " + apellido ;
     }
 }
+
