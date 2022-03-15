@@ -54,6 +54,11 @@ public class Reto10 {
                     case 1:
                         System.out.println(sumarDigitos(scanInt("Ingrese el número al cual desea sumarle los digitos. ")));
                         break;
+                                            case 2:
+                        System.out.println("FlatMap es una funcion que recibe una entrada y devuelve varias salidas\n"
+                                + "para esa entrada, una vez finaliza su pocesamiento devuelve la instancia del stream\n"
+                                + "la operacion es una combinacion de lasoperaciones map() y flat() ");
+                        break;
                     case 3:
                         raices(dobles);
                         break;
